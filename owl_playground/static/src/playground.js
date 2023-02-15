@@ -1,9 +1,10 @@
 /** @odoo-module **/
 
 import { Component, useState } from "@odoo/owl";
-import { Counter } from "./counter";
+import { Counter } from "./counter/counter";
+import { Todo } from "./todo/todo";
 
 export class Playground extends Component {
-  static components = { Counter };
   static template = "owl_playground.playground";
+  static components = { Counter, Todo };
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="owl_playground.todo" owl="1">
+        <div>
+            <p>
+                <span t-esc="todo.id"></span> <span t-esc="todo.description"></span>
+            </p>
+        </div>
+    </t>
+</templates>
