@@ -10,7 +10,7 @@ export class Todo extends Component {
     this.state.value++;
   }
 }
-Todo.template = "owl_playground.Todo";
+Todo.template = "owl_playground.todo";
 // Todo.props = {
 //   id: { type: Number },
 //   description: { type: String },
