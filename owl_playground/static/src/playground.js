@@ -6,5 +6,6 @@ import { Todo } from "./todo/todo";
 
 export class Playground extends Component {
   static template = "owl_playground.playground";
-  static components = { Counter, Todo };
+  static components = { Counter };
+  // , Todo
 }
