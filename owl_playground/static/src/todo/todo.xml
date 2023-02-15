@@ -3,7 +3,7 @@
     <t t-name="owl_playground.todo" owl="1">
         <div>
             <p>
-                <span t-esc="todo.id"></span> <span t-esc="todo.description"></span>
+                <span ><t t-esc="todo.id" /></span> <span><t t-esc="todo.description"/></span>
             </p>
         </div>
     </t>
