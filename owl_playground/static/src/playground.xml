@@ -6,7 +6,7 @@
         </div>
         <Counter />
         <!-- <Todo id="1" description="Buy milk" done="true" /> -->
-        <t t-set="todos" t-value="state.mapped('line_ids')" />
+        <t t-set="todos" t-value="state.todos" />
         <t t-foreach="todos" t-as="todo" t-key="todo.id">
             <Todo todo="todo"/>
         </t>
