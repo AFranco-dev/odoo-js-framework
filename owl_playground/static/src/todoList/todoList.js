@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import { Component, useState } from "@odoo/owl";
-import { Todo } from "./todo/todo";
+import { Todo } from "../todo/todo";
 
 export class TodoList extends Component {
   setup() {
