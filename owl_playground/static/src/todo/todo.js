@@ -16,16 +16,6 @@ export class Todo extends Component {
       },
     },
   };
-  setup() {
-    this.state = useState({
-      todos: [
-        { id: 1, description: "Buy Milk", done: false },
-        { id: 2, description: "Clean the house", done: true },
-        { id: 3, description: "Go for a run", done: false },
-      ],
-    });
-    console.log(state.todos);
-  }
 }
 Todo.template = "owl_playground.todo";
 // Todo.props = {
