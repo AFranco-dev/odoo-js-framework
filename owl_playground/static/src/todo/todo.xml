@@ -2,9 +2,7 @@
 <templates xml:space="preserve">
     <t t-name="owl_playground.todo" owl="1">
         <li t-att-class="{'text-muted text-decoration-line-through': props.todo.done}">
-            <span><t t-esc="props.todo.id" /></span>
-            <span><t t-esc="props.todo.description" /></span>
-            <span><t t-esc="props.todo.done" /></span>
+            <span><t t-esc="props.todo.id" />. <t t-esc="props.todo.description" /></span>
         </li>
     </t>
 </templates>
