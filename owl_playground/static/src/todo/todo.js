@@ -5,9 +5,12 @@ import { Component } from "@odoo/owl";
 export class Todo extends Component {
   static props = {
     todo: {
-      id: { type: Number },
-      description: { type: String },
-      done: Boolean,
+      type: Object,
+      shape: {
+        id: Number,
+        description: String,
+        done: Boolean,
+      },
     },
   };
 }
