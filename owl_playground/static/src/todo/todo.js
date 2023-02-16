@@ -4,15 +4,12 @@ import { Component, useState } from "@odoo/owl";
 
 export class Todo extends Component {
   static props = {
-    todos: {
-      type: Array,
-      element: {
-        type: Object,
-        shape: {
-          id: Number,
-          description: String,
-          done: { type: Boolean, default: false },
-        },
+    todo: {
+      type: Object,
+      shape: {
+        id: Number,
+        description: String,
+        done: { type: Boolean, default: false },
       },
     },
   };
