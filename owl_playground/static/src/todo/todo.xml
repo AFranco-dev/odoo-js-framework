@@ -4,7 +4,7 @@
         <p>Hola</p>
         <div>
             <p>
-                <span><t t-esc="todo.id" /></span>
+                <!-- <span><t t-esc="todo.id" /></span> -->
                 <span><t t-esc="todo.description" /></span>
                 <span><t t-esc="todo.done" /></span>
             </p>
