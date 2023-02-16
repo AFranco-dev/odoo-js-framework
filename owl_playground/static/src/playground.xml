@@ -6,7 +6,8 @@
         </div>
         <Counter />
         <!-- <Todo id="1" description="Buy milk" done="true" /> -->
-        <Todo todos="[{ id: 1, description: 'Buy milk', done: true }, { id: 2, description: 'Drink milk', done: true }, { id: 1, description: 'Save milk', done: false }]"/>
+        <Todo todos="[{ id: 1, description: 'Buy milk', done: true }]"/>
+        <!-- , { id: 2, description: 'Drink milk', done: true }, { id: 1, description: 'Save milk', done: false } -->
         <!-- , done: true -->
     </t>
 </templates>
