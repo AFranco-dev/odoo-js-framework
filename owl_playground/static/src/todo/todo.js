@@ -6,10 +6,13 @@ export class Todo extends Component {
   static props = {
     todos: {
       type: Array,
-      shape: {
-        id: Number,
-        description: String,
-        done: Boolean,
+      element: {
+        type: Object,
+        shape: {
+          id: Number,
+          description: String,
+          done: Boolean,
+        },
       },
     },
   };
