@@ -5,6 +5,7 @@
             hello world
         </div>
         <Counter />
-        <Todo todo="{ id: 1, description: 'Buy milk', done: true }"/>
+        <Todo id="1" description="Buy milk" done="true" />
+        <!-- <Todo todo="{ id: 1, description: 'Buy milk', done: true }"/> -->
     </t>
 </templates>
