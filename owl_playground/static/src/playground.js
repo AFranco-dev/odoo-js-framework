@@ -13,7 +13,7 @@ export class Playground extends Component {
         { id: 3, description: "Go for a run", done: false },
       ],
     });
-    console.log(state.todos);
+    // console.log(state.todos);
   }
   static template = "owl_playground.playground";
   static components = { Counter, Todo };
