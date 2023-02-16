@@ -4,7 +4,7 @@ import { Component, useState } from "@odoo/owl";
 
 export class Todo extends Component {
   setup() {
-    this.todo = { id: 3, description: "Buy Milk" };
+    this.todo = { id: 3, description: "Buy Milk", done: false };
     // , done: false
   }
   increment() {
