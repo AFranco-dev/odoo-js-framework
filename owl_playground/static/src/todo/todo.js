@@ -11,7 +11,7 @@ export class Todo extends Component {
         shape: {
           id: Number,
           description: String,
-          done: Boolean,
+          done: { type: Boolean, default: false },
         },
       },
     },
