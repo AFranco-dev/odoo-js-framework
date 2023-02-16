@@ -8,9 +8,6 @@ Todo.props = {
   todo: {
     id: { type: Number },
     description: { type: String },
-    done: {
-      type: Boolean,
-      validate: (v) => v === true || v === false,
-    },
+    done: Boolean,
   },
 };
