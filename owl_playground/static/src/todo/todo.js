@@ -4,8 +4,8 @@ import { Component } from "@odoo/owl";
 
 export class Todo extends Component {
   static props = {
-    todo: {
-      type: Object,
+    todos: {
+      type: Array,
       shape: {
         id: Number,
         description: String,

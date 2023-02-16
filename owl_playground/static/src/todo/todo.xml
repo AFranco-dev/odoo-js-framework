@@ -3,11 +3,17 @@
     <t t-name="owl_playground.todo" owl="1">
         <p>Hola</p>
         <div>
-            <p t-att-class="{'text-muted text-decoration-line-through': props.todo.done}">
-                <span><t t-esc="props.todo.id" /></span>
-                <span><t t-esc="props.todo.description" /></span>
-                <span><t t-esc="props.todo.done" /></span>
-            </p>
+            <ul>
+                <t t-foreach="props.todos" t-as="todo" t-key="todo.id">
+                    <li>
+                        <p t-att-class="{'text-muted text-decoration-line-through': props.todo.done}">
+                            <span><t t-esc="props.todo.id" /></span>
+                            <span><t t-esc="props.todo.description" /></span>
+                            <span><t t-esc="props.todo.done" /></span>
+                        </p>
+                    </li>
+                </t>
+            </ul>
         </div>
     </t>
 </templates>
