@@ -6,7 +6,7 @@
         </div>
         <Counter />
         <!-- <Todo id="1" description="Buy milk" done="true" /> -->
-        <Todo todo="{ id: 1, description: 'Buy milk' }"/>
+        <Todo todo="{ id: 1, description: 'Buy milk', done: 132 }"/>
         <!-- , done: true -->
     </t>
 </templates>
