@@ -6,7 +6,7 @@
         </div>
         <Counter />
         <!-- <Todo id="1" description="Buy milk" done="true" /> -->
-        <Todo todos="[{ id: 1, description: 'Buy milk', done: true }]"/>
+        <Todo t-att-todos="state.todos"/>
         <!-- , { id: 2, description: 'Drink milk', done: true }, { id: 1, description: 'Save milk', done: false } -->
         <!-- , done: true -->
     </t>
