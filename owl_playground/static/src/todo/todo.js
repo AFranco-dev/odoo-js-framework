@@ -4,7 +4,7 @@ import { Component, useState } from "@odoo/owl";
 
 export class Todo extends Component {
   setup() {
-    this.props = { id: 3, description: "Buy Milk" };
+    this.todo = { id: 3, description: "Buy Milk" };
     // , done: false
   }
   increment() {
@@ -13,7 +13,12 @@ export class Todo extends Component {
 }
 Todo.template = "owl_playground.todo";
 Todo.props = {
-  id: { type: Number },
-  description: { type: String },
-  done: { type: Boolean },
+  todo: {
+    id: { type: Number },
+    description: { type: String },
+    done: { type: Boolean },
+  },
+  // id: { type: Number },
+  // description: { type: String },
+  // done: { type: Boolean },
 };
