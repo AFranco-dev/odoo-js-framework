@@ -49,6 +49,13 @@ export class TodoList extends Component {
     const todo = this.state.todos.find((todo) => todo.id === todoId);
     if (todo) todo.done = !todo.done;
   }
+  removeTodo(todoId) {
+    console.log("using delete todo");
+    const todoIndex = this.state.todos.findIndex((todo) => todo.id === todoId);
+    if (todoIndex > 0) {
+      this.state.todos.splice(todoIndex, 1);
+    }
+  }
   static template = "owl_playground.todoList";
   static components = { Todo };
 }
