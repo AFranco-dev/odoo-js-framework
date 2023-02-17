@@ -7,6 +7,7 @@ import { useAutofocus } from "../utils/utils";
 export class TodoList extends Component {
   setup() {
     this.toggleState = this.toggleState.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
     this.state = useState({
       todos: [
         {
