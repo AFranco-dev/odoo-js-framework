@@ -4,6 +4,7 @@ import { Component, useState } from "@odoo/owl";
 import { Counter } from "./counter/counter";
 import { TodoList } from "./todoList/todoList";
 import { Todo } from "./todo/todo";
+import { Card } from "./card/card";
 
 export class Playground extends Component {
   // setup() {
@@ -17,5 +18,5 @@ export class Playground extends Component {
   //   // console.log(state.todos);
   // }
   static template = "owl_playground.playground";
-  static components = { Counter, TodoList, Todo };
+  static components = { Counter, TodoList, Todo, Card };
 }
