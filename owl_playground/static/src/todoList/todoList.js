@@ -8,14 +8,30 @@ export class TodoList extends Component {
   setup() {
     this.state = useState({
       todos: [
-        { id: 1, description: "Buy Milk", done: false },
-        { id: 2, description: "Clean the house", done: true },
-        { id: 3, description: "Go for a run", done: false },
+        {
+          id: 1,
+          description: "Buy Milk",
+          done: false,
+          toggleState: this.toggleState,
+        },
+        {
+          id: 2,
+          description: "Clean the house",
+          done: true,
+          toggleState: this.toggleState,
+        },
+        {
+          id: 3,
+          description: "Go for a run",
+          done: false,
+          toggleState: this.toggleState,
+        },
       ],
     });
     this.nextId = 4;
     useAutofocus("todoListInput");
     console.log(this.state.todos);
+    this.toggleState = this.toggleState.bind(this);
   }
   addTodo(ev) {
     if (ev.keyCode === 13 && ev.target.value != "") {
@@ -23,6 +39,7 @@ export class TodoList extends Component {
         id: this.nextId++,
         description: ev.target.value,
         done: false,
+        toggleState: this.toggleState,
       });
       ev.target.value = "";
     }
