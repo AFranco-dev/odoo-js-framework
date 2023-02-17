@@ -7,7 +7,7 @@
             <li t-att-class="{'text-muted text-decoration-line-through': props.todo.done}">
                 <span><t t-esc="props.todo.id" />. <t t-esc="props.todo.description" /></span>
             </li>
-            <i class="fa-sharp fa-solid fa-xmark text-danger"></i>
+            <i class="fa-sharp fa-solid fa-xmark text-danger ms-3"></i>
         </div>
     </t>
 </templates>
