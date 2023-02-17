@@ -6,6 +6,7 @@ import { useAutofocus } from "../utils/utils";
 
 export class TodoList extends Component {
   setup() {
+    this.toggleState = this.toggleState.bind(this);
     this.state = useState({
       todos: [
         {
@@ -31,7 +32,6 @@ export class TodoList extends Component {
     this.nextId = 4;
     useAutofocus("todoListInput");
     console.log(this.state.todos);
-    this.toggleState = this.toggleState.bind(this);
   }
   addTodo(ev) {
     if (ev.keyCode === 13 && ev.target.value != "") {
