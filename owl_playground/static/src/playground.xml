@@ -6,6 +6,10 @@
         </div>
         <Counter />
         <TodoList />
+        <Card>
+            <t t-set-slot="title">Título mi carta</t>
+            Demostración default
+        </Card>
         <!-- <Todo id="1" description="Buy milk" done="true" /> -->
         <!-- <t t-set="todos" t-value="state.todos" />
         <t t-foreach="todos" t-as="todo" t-key="todo.id">
