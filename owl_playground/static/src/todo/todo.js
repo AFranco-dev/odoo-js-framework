@@ -13,7 +13,7 @@ export class Todo extends Component {
         id: Number,
         description: String,
         done: { type: Boolean, default: false },
-        // toggleState: { type: Function },
+        toggleState: { type: Function },
       },
     },
   };
