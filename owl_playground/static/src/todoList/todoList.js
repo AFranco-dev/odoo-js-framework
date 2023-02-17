@@ -15,7 +15,7 @@ export class TodoList extends Component {
     });
     this.nextId = 4;
     useAutofocus("todoListInput");
-    console.log(state.todos);
+    console.log(this.state.todos);
   }
   addTodo(ev) {
     if (ev.keyCode === 13 && ev.target.value != "") {
