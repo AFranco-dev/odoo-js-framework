@@ -12,7 +12,7 @@ export class TodoList extends Component {
         { id: 3, description: "Go for a run", done: false },
       ],
     });
-    this.nextId = 0;
+    this.nextId = 4;
     // console.log(state.todos);
   }
   addTodo(ev) {
