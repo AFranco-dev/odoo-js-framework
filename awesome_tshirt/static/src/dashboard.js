@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import { registry } from "@web/core/registry";
-import { layout } from "@web/search/layout";
+import { Layout } from "@web/search/layout";
 import { getDefaultConfig } from "@web/views/view";
 
 const { Component, useSubEnv } = owl;
@@ -22,7 +22,7 @@ class AwesomeDashboard extends Component {
   }
 }
 
-AwesomeDashboard.components = { layout };
+AwesomeDashboard.components = { Layout };
 AwesomeDashboard.template = "awesome_tshirt.clientaction";
 
 registry.category("actions").add("awesome_tshirt.dashboard", AwesomeDashboard);
