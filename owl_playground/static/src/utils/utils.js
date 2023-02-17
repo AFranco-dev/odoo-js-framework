@@ -7,4 +7,5 @@ export function useAutofocus(name) {
   onMounted(() => {
     if (ref.el) ref.el.focus();
   });
+  console.log("Used the useAutoFocus function");
 }

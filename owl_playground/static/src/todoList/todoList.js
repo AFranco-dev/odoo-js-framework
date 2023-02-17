@@ -15,7 +15,7 @@ export class TodoList extends Component {
     });
     this.nextId = 4;
     useAutofocus("todoListInput");
-    // console.log(state.todos);
+    console.log(state.todos);
   }
   addTodo(ev) {
     if (ev.keyCode === 13 && ev.target.value != "") {
@@ -26,6 +26,9 @@ export class TodoList extends Component {
       });
       ev.target.value = "";
     }
+  }
+  toggleState() {
+    console.log("using toggle state");
   }
   static template = "owl_playground.todoList";
   static components = { Todo };

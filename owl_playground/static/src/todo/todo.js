@@ -3,6 +3,9 @@
 import { Component, useState } from "@odoo/owl";
 
 export class Todo extends Component {
+  onClick(e) {
+    this.props.todo.toggleState(this.props.todo.id);
+  }
   static props = {
     todo: {
       type: Object,
@@ -10,6 +13,7 @@ export class Todo extends Component {
         id: Number,
         description: String,
         done: { type: Boolean, default: false },
+        toggleState: { type: Function },
       },
     },
   };

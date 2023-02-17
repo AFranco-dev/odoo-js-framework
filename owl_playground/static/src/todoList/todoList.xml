@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="owl_playground.todoList" owl="1">
-        <!-- <Todo id="1" description="Buy milk" done="true" /> -->
         <input type="text" placeholder="Add a todo" t-on-keyup="addTodo" t-ref="todoListInput" />
         <t t-set="todos" t-value="state.todos" />
         <t t-foreach="todos" t-as="todo" t-key="todo.id">
-            <Todo todo="todo"/>
+            <t t-set="toggleState" t-value="todo.toggleState" />
+            <Todo todo="todo" toggleState.bind="toggleState"/>
         </t>
-        <!-- , { id: 2, description: 'Drink milk', done: true }, { id: 1, description: 'Save milk', done: false } -->
-        <!-- , done: true -->
     </t>
 </templates>
