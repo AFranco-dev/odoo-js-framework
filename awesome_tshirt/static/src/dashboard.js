@@ -3,6 +3,7 @@
 import { registry } from "@web/core/registry";
 import { Layout } from "@web/search/layout";
 import { getDefaultConfig } from "@web/views/view";
+import { useService } from "@web/core/utils/hooks";
 
 const { Component, useSubEnv } = owl;
 
@@ -19,6 +20,11 @@ class AwesomeDashboard extends Component {
     this.display = {
       controlPanel: { "top-right": false, "bottom-right": false },
     };
+
+    this.action = useService("action");
+  }
+  openCustomerView() {
+    this.action.doAction("base.action_partner_form");
   }
 }
 
