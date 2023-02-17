@@ -44,8 +44,10 @@ export class TodoList extends Component {
       ev.target.value = "";
     }
   }
-  toggleState() {
+  toggleState(todoId) {
     console.log("using toggle state");
+    const todo = this.todos.find((todo) => todo.id === todoId);
+    if (todo) todo.done = !todo.done;
   }
   static template = "owl_playground.todoList";
   static components = { Todo };
