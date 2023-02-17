@@ -58,6 +58,7 @@ export class TodoList extends Component {
     console.log("using delete todo");
     const todoIndex = this.state.todos.findIndex((todo) => todo.id === todoId);
     if (todoIndex > 0) {
+      console.log("if found");
       this.state.todos.splice(todoIndex, 1);
     }
   }
