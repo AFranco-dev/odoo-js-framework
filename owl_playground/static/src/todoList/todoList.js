@@ -15,18 +15,21 @@ export class TodoList extends Component {
           description: "Buy Milk",
           done: false,
           toggleState: this.toggleState,
+          removeTodo: this.removeTodo,
         },
         {
           id: 2,
           description: "Clean the house",
           done: true,
           toggleState: this.toggleState,
+          removeTodo: this.removeTodo,
         },
         {
           id: 3,
           description: "Go for a run",
           done: false,
           toggleState: this.toggleState,
+          removeTodo: this.removeTodo,
         },
       ],
     });
@@ -41,6 +44,7 @@ export class TodoList extends Component {
         description: ev.target.value,
         done: false,
         toggleState: this.toggleState,
+        removeTodo: this.removeTodo,
       });
       ev.target.value = "";
     }
