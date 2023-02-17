@@ -15,13 +15,14 @@ export class TodoList extends Component {
     this.nextId = 0;
     // console.log(state.todos);
   }
-  addTodo(e) {
+  addTodo(ev) {
     if (ev.keyCode === 13 && ev.target.value != "") {
       this.state.todos.push({
         id: this.nextId++,
         description: ev.target.value,
         done: false,
       });
+      ev.target.value = "";
     }
   }
   static template = "owl_playground.todoList";
