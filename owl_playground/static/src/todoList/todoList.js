@@ -2,6 +2,7 @@
 
 import { Component, useState, onMounted, useRef } from "@odoo/owl";
 import { Todo } from "../todo/todo";
+import { useAutofocus } from "../utils/utils";
 
 export class TodoList extends Component {
   setup() {
@@ -13,10 +14,7 @@ export class TodoList extends Component {
       ],
     });
     this.nextId = 4;
-    const ref = useRef("todoListInput");
-    onMounted(() => {
-      if (ref.el) ref.el.focus();
-    });
+    useAutofocus("todoListInput");
     // console.log(state.todos);
   }
   addTodo(ev) {
