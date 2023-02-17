@@ -46,7 +46,7 @@ export class TodoList extends Component {
   }
   toggleState(todoId) {
     console.log("using toggle state");
-    const todo = this.todos.find((todo) => todo.id === todoId);
+    const todo = this.state.todos.find((todo) => todo.id === todoId);
     if (todo) todo.done = !todo.done;
   }
   static template = "owl_playground.todoList";
