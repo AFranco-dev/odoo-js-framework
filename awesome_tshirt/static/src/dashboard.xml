@@ -8,6 +8,7 @@
             <button class="btn btn-primary" t-on-click="openCustomerView"> Customers </button>
             <button class="btn btn-primary" t-on-click="openLast7DaysOrders"> Last 7 Days Orders </button>
             <button class="btn btn-primary" t-on-click="openLast7DaysCancelledOrders"> Last 7 Days Cancelled Orders </button>
+            <button class="btn btn-primary" t-on-click="cLogKeysFromObject"> Print Keys </button>
         </t>
     </Layout>
 

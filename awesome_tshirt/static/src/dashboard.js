@@ -5,8 +5,9 @@ import { Layout } from "@web/search/layout";
 import { getDefaultConfig } from "@web/views/view";
 import { useService } from "@web/core/utils/hooks";
 import { Domain } from "@web/core/domain";
+import { Card } from "./card/card";
 
-const { Component, useSubEnv } = owl;
+const { Component, useSubEnv, onWillStart } = owl;
 
 class AwesomeDashboard extends Component {
   setup() {
@@ -23,6 +24,11 @@ class AwesomeDashboard extends Component {
     };
 
     this.action = useService("action");
+    this.rpc = useService("rpc");
+
+    onWillStart(async () => {
+      this.statistics = await this.rpc("/awesome_tshirt/statistics");
+    });
   }
   openCustomerView() {
     this.action.doAction("base.action_partner_form");
@@ -49,9 +55,13 @@ class AwesomeDashboard extends Component {
       "[('create_date','>=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d')), ('state','=', 'cancelled')]";
     this.openOrders("Last 7 days orders", domain);
   }
+  cLogKeysFromObject() {
+    console.log(Object.keys(this.statistics));
+    console.log(this.statistics);
+  }
 }
 
-AwesomeDashboard.components = { Layout };
+AwesomeDashboard.components = { Layout, Card };
 AwesomeDashboard.template = "awesome_tshirt.clientaction";
 
 registry.category("actions").add("awesome_tshirt.dashboard", AwesomeDashboard);
