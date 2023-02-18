@@ -19,7 +19,7 @@
         <div t-foreach="keyToString" t-as="key" t-key="key" class="m-2">
             <Card>
                 <t t-set-slot="title"><t t-esc="keyToString[key]"/></t>
-                <p class="card-text"><t t-esc="statistics[key]"/></p>
+                <t t-esc="statistics[key]"/>
             </Card>   
         </div>      
     </div>
