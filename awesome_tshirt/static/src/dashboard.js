@@ -4,6 +4,7 @@ import { registry } from "@web/core/registry";
 import { Layout } from "@web/search/layout";
 import { getDefaultConfig } from "@web/views/view";
 import { useService } from "@web/core/utils/hooks";
+import { Domain } from "@web/core/domain";
 
 const { Component, useSubEnv } = owl;
 
