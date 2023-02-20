@@ -4,7 +4,7 @@ const { Component } = owl;
 
 export class Card extends Component {}
 
-Card.template = "owl_playground.card";
+Card.template = "awesome_tshirt.card";
 Card.props = {
   slots: {
     type: Object,
