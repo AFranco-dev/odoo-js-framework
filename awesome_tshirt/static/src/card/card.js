@@ -16,4 +16,8 @@ Card.props = {
       },
     },
   },
+  className: {
+    type: String,
+    optional: true,
+  },
 };

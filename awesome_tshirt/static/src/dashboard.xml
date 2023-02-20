@@ -11,6 +11,12 @@
             <button class="btn btn-primary" t-on-click="cLogKeysFromObject"> Print Keys </button>
         </t>
         <t t-call="awesome_tshirt.clientaction.statistics" />
+        <div>
+            <Card>
+                <t t-set-slot="title">Shirt orders by size</t>
+                <PieChart data="statistics['orders_by_size']" label="'Shirt orders by size'"/>
+            </Card>
+        </div>
     </Layout>
 
 </t>
