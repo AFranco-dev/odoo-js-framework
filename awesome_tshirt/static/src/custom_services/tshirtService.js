@@ -12,4 +12,4 @@ export const tshirtService = {
     };
   },
 };
-registry.category("services").add("tshirtService", "tshirtService");
+registry.category("services").add("tshirtService", tshirtService);
