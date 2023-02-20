@@ -61,6 +61,7 @@ export class PieChart extends Component {
   //       }
 
   renderChart() {
+    console.log("renderChart initiated");
     if (this.chart) {
       this.chart.destroy();
     }
