@@ -32,34 +32,11 @@ export class PieChart extends Component {
     });
   }
 
-  // getChartConfig() {
-  //   return {
-  //     type: "pie",
-  //     data: {
-  //       labels: this.labels,
-  //       datasets: [
-  //         {
-  //           label: this.props.label,
-  //           data: this.data,
-  //           backgroundColor: this.color,
-  //         },
-  //       ],
-  //     },
-  //   };
-  // }
-  // {
-  //           type: "pie",
-  //           data: {
-  //               labels: this.labels,
-  //               datasets: [
-  //                   {
-  //                       label: this.props.label,
-  //                       data: this.data,
-  //                       backgroundColor: this.color,
-  //                   },
-  //               ],
-  //           },
-  //       }
+  onPieClick(ev, chartElem) {
+    const clickedIndex = chartElem[0]._index;
+    console.log(clickedIndex);
+    this.props.onPieClick(this.labels[clickedIndex]);
+  }
 
   renderChart() {
     console.log("renderChart initiated");
@@ -79,6 +56,9 @@ export class PieChart extends Component {
           },
         ],
       },
+      options: {
+        onClick: this.onPieClick.bind(this),
+      },
     });
     // To perform its animations, ChartJS will perform each animation
     // step in the next animation frame. The initial rendering itself
@@ -89,3 +69,9 @@ export class PieChart extends Component {
 }
 
 PieChart.template = "awesome_tshirt.pie_chart";
+
+PieChart.props = {
+  data: { type: Object },
+  label: { type: String },
+  onPieClick: { type: Function },
+};

@@ -20,6 +20,9 @@ class AwesomeDashboard extends Component {
         ...this.env.config,
       },
     });
+    // Here we are binding the function to this compoennnt so the this keyword
+    // is used correctly on the sub component
+    this.openFilteredBySizeOrders = this.openFilteredBySizeOrders.bind(this);
     // Here I am defining the display properties
     this.display = {
       controlPanel: { "top-right": false, "bottom-right": false },
@@ -75,6 +78,13 @@ class AwesomeDashboard extends Component {
     const domain =
       "[('create_date','>=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d')), ('state','=', 'cancelled')]";
     this.openOrders("Last 7 days orders", domain);
+  }
+
+  // This is the extension that enables to show the orders made from the size of shirt from the pie chart
+  openFilteredBySizeOrders(size) {
+    const title = `Filtered orders by ${size}`;
+    const domain = `[('size', '=', ${size})]`;
+    this.openOrders(title, domain);
   }
 
   // This is the logging tool for finding the description of objects
