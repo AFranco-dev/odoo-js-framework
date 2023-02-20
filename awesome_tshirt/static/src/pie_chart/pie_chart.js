@@ -25,7 +25,7 @@ export class PieChart extends Component {
     });
     onMounted(() => {
       console.log("onMounted started");
-      this.renderChart;
+      this.renderChart();
     });
     onWillUnmount(() => {
       if (this.chart) this.chart.destroy();
