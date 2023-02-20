@@ -26,21 +26,21 @@ export class PieChart extends Component {
     });
   }
 
-  getChartConfig() {
-    return {
-      type: "pie",
-      data: {
-        labels: this.labels,
-        datasets: [
-          {
-            label: this.props.label,
-            data: this.data,
-            backgroundColor: this.color,
-          },
-        ],
-      },
-    };
-  }
+  // getChartConfig() {
+  //   return {
+  //     type: "pie",
+  //     data: {
+  //       labels: this.labels,
+  //       datasets: [
+  //         {
+  //           label: this.props.label,
+  //           data: this.data,
+  //           backgroundColor: this.color,
+  //         },
+  //       ],
+  //     },
+  //   };
+  // }
   // {
   //           type: "pie",
   //           data: {
@@ -59,8 +59,20 @@ export class PieChart extends Component {
     if (this.chart) {
       this.chart.destroy();
     }
-    const config = this.getChartConfig();
-    this.chart = new Chart(this.canvasRef.el, config);
+    // const config = this.getChartConfig();
+    this.chart = new Chart(this.canvasRef.el, {
+      type: "pie",
+      data: {
+        labels: this.labels,
+        datasets: [
+          {
+            label: this.props.label,
+            data: this.data,
+            backgroundColor: this.color,
+          },
+        ],
+      },
+    });
     // To perform its animations, ChartJS will perform each animation
     // step in the next animation frame. The initial rendering itself
     // is delayed for consistency. We can avoid this by manually
