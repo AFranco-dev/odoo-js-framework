@@ -81,6 +81,7 @@ class AwesomeDashboard extends Component {
   cLogKeysFromObject() {
     console.log(Object.keys(this.statistics));
     console.log(this.statistics);
+    console.log(statistics["orders_by_size"]);
   }
 }
 
