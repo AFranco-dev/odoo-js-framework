@@ -55,6 +55,7 @@ class AwesomeDashboard extends Component {
   }
   // this is the base action for opening the purchase orders
   openOrders(title, domain) {
+    console.log("Open orders ");
     this.action.doAction({
       type: "ir.actions.act_window",
       name: title,
@@ -85,7 +86,7 @@ class AwesomeDashboard extends Component {
     console.log("openFilteredBysizeOrders executed");
     const title = `Filtered orders by ${size}`;
     console.log(title);
-    const domain = `[('size', '=', ${size})]`;
+    const domain = `[('size', '=', '${size}')]`;
     console.log(domain);
     this.openOrders(title, domain);
   }
