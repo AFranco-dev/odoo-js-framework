@@ -16,6 +16,10 @@ export class PieChart extends Component {
       return getColor(index);
     });
 
+    console.log(this.labels);
+    console.log(this.data);
+    console.log(this.color);
+
     onWillStart(() => {
       return loadJS(["/web/static/lib/Chart/Chart.js"]);
     });
