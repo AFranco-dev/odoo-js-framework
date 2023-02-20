@@ -42,7 +42,7 @@ class AwesomeDashboard extends Component {
     onWillStart(async () => {
       // Replaced this for a custom service that enables cache the server call
       // this.statistics = await this.rpc("/awesome_tshirt/statistics");
-      this.statistics = await tshirtService.loadStatistics();
+      this.statistics = await this.tshirtService.loadStatistics();
     });
   }
   // This is the action defined for opening the clients section
