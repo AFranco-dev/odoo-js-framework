@@ -83,7 +83,9 @@ class AwesomeDashboard extends Component {
   // This is the extension that enables to show the orders made from the size of shirt from the pie chart
   openFilteredBySizeOrders(size) {
     const title = `Filtered orders by ${size}`;
+    console.log(title);
     const domain = `[('size', '=', ${size})]`;
+    console.log(domain);
     this.openOrders(title, domain);
   }
 
