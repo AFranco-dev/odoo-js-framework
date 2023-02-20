@@ -26,7 +26,9 @@ class AwesomeDashboard extends Component {
     // This is used in order to be able to create actions from the js framework
     this.action = useService("action");
     // This is used in order to be able to do RPC calls to the server
-    this.rpc = useService("rpc");
+    // This line of code is replaced in order to be able to use the custom service
+    // this.rpc = useService("rpc");
+    this.tshirtService = useService("tshirtService");
     // These are the keys that are used in the return object of the statistics call
     this.keyToString = {
       average_quantity: "Average amount of t-shirt by order this month",
@@ -38,7 +40,9 @@ class AwesomeDashboard extends Component {
     };
     // This is used in order to load values before page rendering time
     onWillStart(async () => {
-      this.statistics = await this.rpc("/awesome_tshirt/statistics");
+      // Replaced this for a custom service that enables cache the server call
+      // this.statistics = await this.rpc("/awesome_tshirt/statistics");
+      this.statistics = await tshirtService.loadStatistics();
     });
   }
   // This is the action defined for opening the clients section
