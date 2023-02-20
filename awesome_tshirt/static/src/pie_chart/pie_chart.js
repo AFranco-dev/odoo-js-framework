@@ -34,12 +34,16 @@ export class PieChart extends Component {
 
   onPieClick(ev, chartElem) {
     console.log("onpieclick initiated");
-    const clickedIndex = chartElem[0]._index;
-    console.log("printing clicked index");
-    console.log(clickedIndex);
-    console.log("printinh this.labels[clickedIndex");
-    console.log(this.labels[clickedIndex]);
-    this.props.onPieClick(this.labels[clickedIndex]);
+    try {
+      const clickedIndex = chartElem[0]._index;
+      console.log("printing clicked index");
+      console.log(clickedIndex);
+      console.log("printinh this.labels[clickedIndex");
+      console.log(this.labels[clickedIndex]);
+      this.props.onPieClick(this.labels[clickedIndex]);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   renderChart() {
