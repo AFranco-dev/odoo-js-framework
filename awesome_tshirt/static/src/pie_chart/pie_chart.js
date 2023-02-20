@@ -69,4 +69,4 @@ export class PieChart extends Component {
   }
 }
 
-Card.template = "awesome_tshirt.pie_chart";
+PieChart.template = "awesome_tshirt.pie_chart";
