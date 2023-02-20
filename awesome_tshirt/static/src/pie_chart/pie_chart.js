@@ -7,6 +7,7 @@ const { Component, onWillStart, useRef, onMounted, onWillUnmount } = owl;
 
 export class PieChart extends Component {
   setup() {
+    console.log(this.props.data);
     this.canvasRef = useRef("canvas");
 
     this.labels = Object.keys(this.props.data);
