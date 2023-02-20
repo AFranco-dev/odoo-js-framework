@@ -24,6 +24,7 @@ export class PieChart extends Component {
       return loadJS(["/web/static/lib/Chart/Chart.js"]);
     });
     onMounted(() => {
+      console.log("onMounted started");
       this.renderChart;
     });
     onWillUnmount(() => {
